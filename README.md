@@ -1,8 +1,8 @@
 #IRCd-Healthcheck#
 
-A simple IRCd health-check utility, written in go, which returns a non-zero status code if unable to connect to a given IRC server.  Perfect for use with mointoring systems.
+A simple IRCd health-check utility, written in go, which returns a non-zero status code if unable to connect to a given IRC server.  Perfect for use with mointoring systems.  [Download a binary of the latest release here](https://github.com/StormBit/ircd-healthcheck/releases/latest).
 
-##Usage: `./healthcheck -server=irc.stormbit.net:6667`##
+###Usage: `./healthcheck -server=irc.stormbit.net:6667`###
 
 Advanced usage:
 ```
