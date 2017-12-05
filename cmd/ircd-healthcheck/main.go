@@ -32,7 +32,7 @@ func main() {
 	// Parse active command-line flags.
 	flag.Parse()
 
-	var success bool
+	var failure bool
 
 	if *secure == true {
 		tlsConfig := &tls.Config{
@@ -45,10 +45,10 @@ func main() {
 			os.Exit(1)
 		}
 
-		success, err = healthcheck.RunHealthcheck(conn)
+		failure, err = healthcheck.RunHealthcheck(conn)
 		if err != nil {
 			fmt.Printf("Error: %s\n", err.Error())
-			success = false
+			failure = true
 		}
 	} else {
 		conn, err := net.Dial("tcp", *server)
@@ -57,12 +57,12 @@ func main() {
 			os.Exit(1)
 		}
 
-		success, err = healthcheck.RunHealthcheck(conn)
+		failure, err = healthcheck.RunHealthcheck(conn)
 		if err != nil {
 			fmt.Printf("Error: %s\n", err.Error())
-			success = false
+			failure = true
 		}
 	}
 
-	os.Exit(boolToInt(success))
+	os.Exit(boolToInt(failure))
 }
