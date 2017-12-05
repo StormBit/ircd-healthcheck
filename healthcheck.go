@@ -12,7 +12,7 @@ import (
  * Returns a string to be used as a nickname.
  */
 func healthcheckNameGenerator() string {
-	const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
+	const letters = "abcdefghijklmnopqrstuvwxyz123456789"
 	byteRange := make([]byte, 10)
 	for i := range byteRange {
 		byteRange[i] = letters[rand.Int63()%int64(len(letters))]
