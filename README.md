@@ -25,7 +25,7 @@ Options:
 
 ---
 
-Copyright (c) 2016, Alex Wilson <a@ax.gy>
+Copyright (c) 2016, Alex Wilson <a@ax.gy>, Alice Jenkinson <0x52a100ff@gmail.com>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
